@@ -1,9 +1,9 @@
-name: Deploy Quasar App
+name: Deploy Quasar App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # 你可以根据你的主分支名称进行调整
+      - main  # 根据你的主分支名称调整
 
 jobs:
   build-and-deploy:
@@ -16,21 +16,18 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # 你可以根据你的项目需求选择合适的 Node.js 版本
+        node-version: '18'  # 根据你的项目需求选择合适的 Node.js 版本
 
     - name: Install dependencies
       run: yarn install  # 或者使用 npm install
 
     - name: Build Quasar App
       run: yarn quasar build  # 或者使用 npm run build
-      uses: appleboy/scp-action@v0.1.1
-    - name: Deploy to Server
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
-        key: ${{ secrets.DEPLOY_KEY }}
-        # 部署到 gh-pages 分支
-          target_branch: gh-pages
-          # 部署目录
-          build_dir: dist
-          
+        branch: gh-pages  # 部署到 gh-pages 分支
+        folder: dist/spa  # 构建后的文件夹路径
+        clean: true  # 清理目标分支上的文件
+        token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 生成的 token
