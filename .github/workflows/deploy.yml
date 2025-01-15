@@ -25,7 +25,6 @@ jobs:
       run: yarn quasar build  # 或者使用 npm run build
 
     - name: Deploy to Server
-      uses: appleboy/scp-action@v0.1.1
       with:
         # 部署到 gh-pages 分支
           target_branch: gh-pages
