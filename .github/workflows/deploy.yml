@@ -28,6 +28,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages  # 部署到 gh-pages 分支
-        folder: dist/spa  # 构建后的文件夹路径
+        folder: dist  # 构建后的文件夹路径
         clean: true  # 清理目标分支上的文件
         token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 生成的 token
