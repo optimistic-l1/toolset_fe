@@ -1,9 +1,8 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+    @click="goToLink"
+      :class="{ 'text-grey': !isActive, 'text-primary': isActive }"
   >
     <q-item-section
       v-if="icon"
@@ -11,19 +10,15 @@
     >
       <q-icon :name="icon" />
     </q-item-section>
-
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
-        {{ caption }}
-      </q-item-label>
     </q-item-section>
   </q-item>
 </template>
 
 <script>
 export default {
-  name: 'EssentialLink',
+  name: 'UiHeader',
   props: {
     title: {
       type: String,
@@ -43,6 +38,16 @@ export default {
     icon: {
       type: String,
       default: ''
+    }
+  },
+  computed: {
+    isActive() {
+      return this.$route.path === this.link;
+    }
+  },
+  methods: {
+    goToLink() {
+      this.$router.push(this.link);
     }
   }
 }

@@ -1,44 +1,68 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-
+  <q-layout view="lHh Lpr lFf">
     <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="leftDrawerOpen = !leftDrawerOpen"
+        />
+
         <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-          ToolSet
+          Toolset
         </q-toolbar-title>
       </q-toolbar>
-
-      <q-tabs align="center">
-        <q-route-tab v-for="(item,i) in nav" :key="i"  :to="item.to" :label="item.label" exact />
-      </q-tabs>
     </q-header>
-
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      content-class="bg-grey-1"
+    >
+      <q-list>
+        <q-item-label header class="text-grey-8">
+          Menu
+        </q-item-label>
+        <UiHeader
+          v-for="link in nav"
+          :key="link.title"
+          v-bind="link"
+        />
+      </q-list>
+    </q-drawer>
     <q-page-container>
       <router-view />
     </q-page-container>
-
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        
-      </q-toolbar>
-    </q-footer>
-
   </q-layout>
 </template>
 
 <script>
-
+import UiHeader from "src/components/UiHeader.vue";
 export default {
-  name: 'MainLayout',
-  data () {
-    return {
-      nav:[{type:'router-link',label:'home',icon:'',to:'/'},{type:'router-link',label:'tool',icon:'',to:'/toolset'},{type:'router-link',label:'help',icon:'',to:'/help'}]
-    }
+  name: "MainLayout",
+  components: {
+    UiHeader,
   },
-  methods: {
-  }
-}
+  data() {
+    return {
+      nav: [
+        {
+          title: "Home",
+          icon: "school",
+          link: "/home",
+        },
+        {
+          title: "Toolset",
+          icon: "code",
+          link: "/toolset",
+        },
+      ],
+      leftDrawerOpen: false,
+    };
+  },
+  methods: {},
+};
 </script>
