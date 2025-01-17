@@ -5,12 +5,22 @@ const routes = [
     children: [
       {
         path: "",
-        redirect: '/home/',
+        redirect: "/home/",
         component: () => import("layouts/MainLayout.vue"),
         children: [
-          { path: "home/", component: () => import("pages/Home") },
-          { path: "toolset/", component: () => import("pages/ToolSet") },
-          { path: "help/", component: () => import("pages/Help") },
+          { path: "/home", component: () => import("pages/Home") },
+          {
+            path: "/toolset",
+            component: { render: (h) => h("router-view") },
+            children: [
+              { path: "", component: () => import("pages/ToolSet") },
+              {
+                path: "colorConverter",
+                component: () => import("pages/Tool/ColorConverter"),
+              },
+            ],
+          },
+          { path: "/help", component: () => import("pages/Help") },
         ],
       },
     ],

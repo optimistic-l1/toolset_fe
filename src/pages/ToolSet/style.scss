@@ -1,4 +1,27 @@
 // $
 #ToolSetPage {
-  
+    .list-item:hover{
+        box-shadow: 5px 5px 10px #FF00FF, -7px -4px 4px #FF9966;
+        scale: 1.03;
+    }
+  .my-card {
+    width: 200px;
+    cursor: pointer;
+
+    .my-card-top {
+      height: 100px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .my-card-bottom {
+      height: 50px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
 }
