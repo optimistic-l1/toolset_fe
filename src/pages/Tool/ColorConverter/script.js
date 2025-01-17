@@ -5,6 +5,7 @@ export default {
       hex: { a: "", b: "" },
       rgb: { a: "", b: "" },
       color: "",
+      capture:'',
     };
   },
   computed: {},
@@ -38,5 +39,14 @@ export default {
       document.body.removeChild(copyipt);
       this.$q.notify({ message: '复制成功'+text, type: 'positive' })
     },
+    captureColor(){
+      const eyeDropper = new EyeDropper();
+    eyeDropper.open().then(res => {
+      this.capture=res.sRGBHex
+    }).catch(err=>{
+      this.$q.notify({ message: '取消拾取'+text, type: 'error' })
+    });
+
+    }
   },
 };

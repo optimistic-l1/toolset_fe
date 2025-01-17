@@ -137,9 +137,23 @@
           </template>
         </q-input>
       </div>
-
-      <q-color v-model="color" class="my-picker" />
     </div>
+    <q-chip color="orange" text-color="white" icon="event">捕色器：</q-chip>
+      <q-separator />
+      <q-btn color="white" text-color="black" label="点击捕捉颜色" class="q-my-md q-mr-md" @click="captureColor"/>
+      <q-btn
+              :style="{ background: capture, color: 'white' }"
+              :label="capture"
+              @click="copyToClipboard(capture)"
+            >
+              <q-tooltip content-class="bg-black" :offset="[10, 10]">
+                点击复制
+              </q-tooltip>
+            </q-btn>
+      <br>
+      <q-chip color="orange" text-color="white" icon="event" class="q-mt-md">颜色器：</q-chip>
+      <q-separator />
+    <q-color v-model="color" class="my-picker q-mt-md" />
   </div>
 </template>
 
