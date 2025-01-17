@@ -18,6 +18,10 @@ const routes = [
                 path: "colorConverter",
                 component: () => import("pages/Tool/ColorConverter"),
               },
+              {
+                path: "imageTranscoding",
+                component: () => import("pages/Tool/ImageTranscoding"),
+              },
             ],
           },
           { path: "/help", component: () => import("pages/Help") },

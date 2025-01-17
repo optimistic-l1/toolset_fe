@@ -1,5 +1,5 @@
 export default {
-  name:'Help',
+  name:'ImageTranscoding',
   methods:{
     
   }
