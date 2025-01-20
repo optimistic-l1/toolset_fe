@@ -1,3 +1,5 @@
+import {copyToClipboard} from 'src/utils'
+
 export default {
   name: "ColorConverter",
   data() {
@@ -10,6 +12,10 @@ export default {
   },
   computed: {},
   methods: {
+    copyToClipboard(text){
+      copyToClipboard(text)
+      this.$q.notify({ message: '复制成功'+text, type: 'positive' })
+    },
     hexToRgb(hex) {
       let r = parseInt(hex.substring(1, 3), 16);
       let g = parseInt(hex.substring(3, 5), 16);
@@ -28,16 +34,6 @@ export default {
           "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
         );
       }
-    },
-    //点击复制
-    async copyToClipboard(text) {
-      var copyipt = document.createElement("input");
-      copyipt.setAttribute("value", text);
-      document.body.appendChild(copyipt);
-      copyipt.select();
-      document.execCommand("copy");
-      document.body.removeChild(copyipt);
-      this.$q.notify({ message: '复制成功'+text, type: 'positive' })
     },
     captureColor(){
       const eyeDropper = new EyeDropper();
