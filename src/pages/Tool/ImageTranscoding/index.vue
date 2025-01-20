@@ -3,18 +3,18 @@
     <div class="q-pa-md q-gutter-sm">
       <q-breadcrumbs>
         <q-breadcrumbs-el label="Toolset" icon="navigation" to="/toolset" />
-        <q-breadcrumbs-el label="ImageTranscoding" icon="palette" />
+        <q-breadcrumbs-el label="ImageTranscoding" icon="insert_photo" />
       </q-breadcrumbs>
     </div>
     <q-chip color="orange" text-color="white" icon="event">图片转Base64：</q-chip>
       <q-separator class="q-mb-md"/>
       <div>
-        <q-file outlined v-model="file" label="选择图片" clearable>
+        <q-file outlined v-model="file" label="选择图片" clearable accept=".jpg, image/*">
         <template v-slot:prepend>
-          <q-icon name="attach_file" />
+          <q-icon name="photo_library" />
         </template>
         <template v-slot:after>
-          <q-btn dense flat icon="send" label='转换' @click="readAsDataURL()"/>
+          <q-btn dense flat icon="wb_twighlight" class="q-pa-sm" label='转换' @click="readAsDataURL()"/>
         </template>
       </q-file>
       <q-input

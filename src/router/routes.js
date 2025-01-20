@@ -22,6 +22,15 @@ const routes = [
                 path: "imageTranscoding",
                 component: () => import("pages/Tool/ImageTranscoding"),
               },
+              {
+                path: "ImageCompression",
+                component: () => import("pages/Tool/ImageCompression"),
+              },
+              {
+                path: "codeEditor",
+                component: () => import("pages/Tool/CodeEditor"),
+              },
+              
             ],
           },
           { path: "/help", component: () => import("pages/Help") },
