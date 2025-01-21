@@ -38,6 +38,10 @@ const routes = [
                 path: "richTextEditor",
                 component: () => import("pages/Tool/RichTextEditor"),
               },
+              {
+                path: "markdownEditor",
+                component: () => import("pages/Tool/MarkdownEditor"),
+              },
               
               
             ],

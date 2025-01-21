@@ -9,7 +9,8 @@ export default {
         {icon:'code',title:'CodeEditor',describe:'代码编辑器',to:'/codeEditor'},
         {icon:'data_object',title:'JsonConverter',describe:'JSON转换器',to:'/jsonConverter'},
         {icon:'terminal',title:'RichTextEditor',describe:'富文本编辑器',to:'/richTextEditor'},
-       
+        {icon:'terminal',title:'MarkdownEditor',describe:'Markdown编辑器',to:'/markdownEditor'},
+        
       ]
     }
   },
