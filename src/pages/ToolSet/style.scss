@@ -10,6 +10,9 @@
 
     .my-card-top {
       height: 100px;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
 
       span {
         font-size: 20px;

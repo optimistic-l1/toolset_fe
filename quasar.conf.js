@@ -9,9 +9,11 @@
 // https://v1.quasar.dev/quasar-cli/quasar-conf-js
 
 const ESLintPlugin = require('eslint-webpack-plugin')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = function (/* ctx */) {
   return {
+    
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
 
@@ -70,7 +72,13 @@ module.exports = function (/* ctx */) {
       chainWebpack (chain) {
         chain.plugin('eslint-webpack-plugin')
           .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
-      }
+         // 添加 MonacoWebpackPlugin 配置
+        chain.plugin('monaco-editor-webpack-plugin')
+        .use(MonacoWebpackPlugin, [{
+          languages: ['javascript', 'json', 'html', 'css'], // 需要支持的语言
+          features: ['coreCommands', 'find', 'format', 'folding', 'suggest'], // 需要启用的功能
+        }]);
+        
     },
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
@@ -198,4 +206,5 @@ module.exports = function (/* ctx */) {
       }
     }
   }
+}
 }
