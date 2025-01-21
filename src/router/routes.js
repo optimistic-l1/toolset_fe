@@ -30,6 +30,15 @@ const routes = [
                 path: "codeEditor",
                 component: () => import("pages/Tool/CodeEditor"),
               },
+              {
+                path: "jsonConverter",
+                component: () => import("pages/Tool/JsonConverter"),
+              },
+              {
+                path: "richTextEditor",
+                component: () => import("pages/Tool/RichTextEditor"),
+              },
+              
               
             ],
           },
