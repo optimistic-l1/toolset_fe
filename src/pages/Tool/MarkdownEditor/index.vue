@@ -7,7 +7,7 @@
       </q-breadcrumbs>
     </div>
     <q-chip color="orange" text-color="white" icon="event">Markdown编辑器：</q-chip>
-      <q-separator />
+      <q-separator class="q-mb-md" />
       <mavon-editor v-model="value" />
   </div>
 </template>

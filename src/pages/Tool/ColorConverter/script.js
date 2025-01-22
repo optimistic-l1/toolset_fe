@@ -10,7 +10,6 @@ export default {
       capture:'',
     };
   },
-  computed: {},
   methods: {
     copyToClipboard(text){
       copyToClipboard(text)
