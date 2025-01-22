@@ -1,13 +1,6 @@
 <template>
-  <q-item
-    clickable
-    @click="goToLink"
-      :class="{ 'text-grey': !isActive, 'text-primary': isActive }"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable @click="goToLink" :class="{ 'text-grey': !isActive, 'text-primary': isActive }">
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
     <q-item-section>
@@ -42,7 +35,8 @@ export default {
   },
   computed: {
     isActive() {
-      return this.$route.path === this.link;
+      // 如果当前路由路径以传入的 link 开头，则认为是激活状态
+      return this.$route.path.startsWith(this.link);
     }
   },
   methods: {
