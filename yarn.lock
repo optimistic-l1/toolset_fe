@@ -1208,20 +1208,6 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@toast-ui/editor@^3.2.2":
-  version "3.2.2"
-  resolved "https://registry.npmmirror.com/@toast-ui/editor/-/editor-3.2.2.tgz#1f2837271c5c9c3e29e090d7440bfc6ab23fb4c4"
-  integrity sha512-ASX7LFjN2ZYQJrwmkUajPs7DRr9FsM1+RQ82CfTO0Y5ZXorBk1VZS4C2Dpxinx9kl55V4F8/A2h2QF4QMDtRbA==
-  dependencies:
-    dompurify "^2.3.3"
-    prosemirror-commands "^1.1.9"
-    prosemirror-history "^1.1.3"
-    prosemirror-inputrules "^1.1.3"
-    prosemirror-keymap "^1.1.4"
-    prosemirror-model "^1.14.1"
-    prosemirror-state "^1.3.4"
-    prosemirror-view "^1.18.7"
-
 "@types/body-parser@*":
   version "1.19.5"
   resolved "https://registry.npmmirror.com/@types/body-parser/-/body-parser-1.19.5.tgz"
@@ -2765,7 +2751,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.19.0, commander@^2.20.0:
+commander@^2.19.0, commander@^2.20.0, commander@^2.20.3:
   version "2.20.3"
   resolved "https://registry.npmmirror.com/commander/-/commander-2.20.3.tgz"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -3173,6 +3159,11 @@ cssesc@^3.0.0:
   resolved "https://registry.npmmirror.com/cssesc/-/cssesc-3.0.0.tgz"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
+cssfilter@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.npmmirror.com/cssfilter/-/cssfilter-0.0.10.tgz#c6d2672632a2e5c83e013e6864a42ce8defd20ae"
+  integrity sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==
+
 cssnano-preset-default@^4.0.7:
   version "4.0.8"
   resolved "https://registry.npmmirror.com/cssnano-preset-default/-/cssnano-preset-default-4.0.8.tgz"
@@ -3549,11 +3540,6 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   integrity sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==
   dependencies:
     domelementtype "^2.2.0"
-
-dompurify@^2.3.3:
-  version "2.5.8"
-  resolved "https://registry.npmmirror.com/dompurify/-/dompurify-2.5.8.tgz#2809d89d7e528dc7a071dea440d7376df676f824"
-  integrity sha512-o1vSNgrmYMQObbSSvF/1brBYEQPHhV1+gsmrusO7/GXtp1T9rCS8cXFqVxK/9crT1jA6Ccv+5MTSjBNqr7Sovw==
 
 domutils@^1.7.0:
   version "1.7.0"
@@ -6082,6 +6068,13 @@ math-intrinsics@^1.1.0:
   resolved "https://registry.npmmirror.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz"
   integrity sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==
 
+mavon-editor@^2.10.4:
+  version "2.10.4"
+  resolved "https://registry.npmmirror.com/mavon-editor/-/mavon-editor-2.10.4.tgz#58d6c4dc208933f0ac4595c10c60655899ba8ba8"
+  integrity sha512-CFsBLkgt/KZBDg+SJYe2fyYv4zClY149PiwpH0rDAiiP4ae1XNs0GC8nBsoTeipsHcebDLN1QMkt3bUsnMDjQw==
+  dependencies:
+    xss "^1.0.6"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.npmmirror.com/md5.js/-/md5.js-1.3.5.tgz"
@@ -6737,11 +6730,6 @@ optionator@^0.9.3:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.5"
-
-orderedmap@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.npmmirror.com/orderedmap/-/orderedmap-2.1.1.tgz#61481269c44031c449915497bf5a4ad273c512d2"
-  integrity sha512-TvAWxi0nDe1j/rtMcWcIj94+Ffe6n7zhow33h40SKxmsmozs6dz/e+EajymfoFcHd7sxNn8yHM8839uixMOV6g==
 
 os-browserify@^0.3.0:
   version "0.3.0"
@@ -7504,73 +7492,6 @@ promise-inflight@^1.0.1:
   resolved "https://registry.npmmirror.com/promise-inflight/-/promise-inflight-1.0.1.tgz"
   integrity sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==
 
-prosemirror-commands@^1.1.9:
-  version "1.6.2"
-  resolved "https://registry.npmmirror.com/prosemirror-commands/-/prosemirror-commands-1.6.2.tgz#d9cf6654912442cff47daa1677eb43ebd0b1f117"
-  integrity sha512-0nDHH++qcf/BuPLYvmqZTUUsPJUCPBUXt0J1ErTcDIS369CTp773itzLGIgIXG4LJXOlwYCr44+Mh4ii6MP1QA==
-  dependencies:
-    prosemirror-model "^1.0.0"
-    prosemirror-state "^1.0.0"
-    prosemirror-transform "^1.10.2"
-
-prosemirror-history@^1.1.3:
-  version "1.4.1"
-  resolved "https://registry.npmmirror.com/prosemirror-history/-/prosemirror-history-1.4.1.tgz#cc370a46fb629e83a33946a0e12612e934ab8b98"
-  integrity sha512-2JZD8z2JviJrboD9cPuX/Sv/1ChFng+xh2tChQ2X4bB2HeK+rra/bmJ3xGntCcjhOqIzSDG6Id7e8RJ9QPXLEQ==
-  dependencies:
-    prosemirror-state "^1.2.2"
-    prosemirror-transform "^1.0.0"
-    prosemirror-view "^1.31.0"
-    rope-sequence "^1.3.0"
-
-prosemirror-inputrules@^1.1.3:
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/prosemirror-inputrules/-/prosemirror-inputrules-1.4.0.tgz#ef1519bb2cb0d1e0cec74bad1a97f1c1555068bb"
-  integrity sha512-6ygpPRuTJ2lcOXs9JkefieMst63wVJBgHZGl5QOytN7oSZs3Co/BYbc3Yx9zm9H37Bxw8kVzCnDsihsVsL4yEg==
-  dependencies:
-    prosemirror-state "^1.0.0"
-    prosemirror-transform "^1.0.0"
-
-prosemirror-keymap@^1.1.4:
-  version "1.2.2"
-  resolved "https://registry.npmmirror.com/prosemirror-keymap/-/prosemirror-keymap-1.2.2.tgz#14a54763a29c7b2704f561088ccf3384d14eb77e"
-  integrity sha512-EAlXoksqC6Vbocqc0GtzCruZEzYgrn+iiGnNjsJsH4mrnIGex4qbLdWWNza3AW5W36ZRrlBID0eM6bdKH4OStQ==
-  dependencies:
-    prosemirror-state "^1.0.0"
-    w3c-keyname "^2.2.0"
-
-prosemirror-model@^1.0.0, prosemirror-model@^1.14.1, prosemirror-model@^1.20.0, prosemirror-model@^1.21.0:
-  version "1.24.1"
-  resolved "https://registry.npmmirror.com/prosemirror-model/-/prosemirror-model-1.24.1.tgz#b445e4f9b9cfc8c1a699215057b506842ebff1a9"
-  integrity sha512-YM053N+vTThzlWJ/AtPtF1j0ebO36nvbmDy4U7qA2XQB8JVaQp1FmB9Jhrps8s+z+uxhhVTny4m20ptUvhk0Mg==
-  dependencies:
-    orderedmap "^2.0.0"
-
-prosemirror-state@^1.0.0, prosemirror-state@^1.2.2, prosemirror-state@^1.3.4:
-  version "1.4.3"
-  resolved "https://registry.npmmirror.com/prosemirror-state/-/prosemirror-state-1.4.3.tgz#94aecf3ffd54ec37e87aa7179d13508da181a080"
-  integrity sha512-goFKORVbvPuAQaXhpbemJFRKJ2aixr+AZMGiquiqKxaucC6hlpHNZHWgz5R7dS4roHiwq9vDctE//CZ++o0W1Q==
-  dependencies:
-    prosemirror-model "^1.0.0"
-    prosemirror-transform "^1.0.0"
-    prosemirror-view "^1.27.0"
-
-prosemirror-transform@^1.0.0, prosemirror-transform@^1.1.0, prosemirror-transform@^1.10.2:
-  version "1.10.2"
-  resolved "https://registry.npmmirror.com/prosemirror-transform/-/prosemirror-transform-1.10.2.tgz#8ebac4e305b586cd96595aa028118c9191bbf052"
-  integrity sha512-2iUq0wv2iRoJO/zj5mv8uDUriOHWzXRnOTVgCzSXnktS/2iQRa3UUQwVlkBlYZFtygw6Nh1+X4mGqoYBINn5KQ==
-  dependencies:
-    prosemirror-model "^1.21.0"
-
-prosemirror-view@^1.18.7, prosemirror-view@^1.27.0, prosemirror-view@^1.31.0:
-  version "1.37.1"
-  resolved "https://registry.npmmirror.com/prosemirror-view/-/prosemirror-view-1.37.1.tgz#3ccd67cd3d831eb37a2505dd34151932462172fb"
-  integrity sha512-MEAnjOdXU1InxEmhjgmEzQAikaS6lF3hD64MveTPpjOGNTl87iRLA1HupC/DEV6YuK7m4Q9DHFNTjwIVtqz5NA==
-  dependencies:
-    prosemirror-model "^1.20.0"
-    prosemirror-state "^1.0.0"
-    prosemirror-transform "^1.1.0"
-
 proto-list@~1.2.1:
   version "1.2.4"
   resolved "https://registry.npmmirror.com/proto-list/-/proto-list-1.2.4.tgz"
@@ -8041,11 +7962,6 @@ roarr@^2.15.3:
     json-stringify-safe "^5.0.1"
     semver-compare "^1.0.0"
     sprintf-js "^1.1.2"
-
-rope-sequence@^1.3.0:
-  version "1.3.4"
-  resolved "https://registry.npmmirror.com/rope-sequence/-/rope-sequence-1.3.4.tgz#df85711aaecd32f1e756f76e43a415171235d425"
-  integrity sha512-UT5EDe2cu2E/6O4igUr5PSFs23nvvukicWHx6GnOPlHAiiYbzNuCRQCuiUdHJQcqKalLKlrYJnjY0ySGsXNQXQ==
 
 rtlcss@2.5.0:
   version "2.5.0"
@@ -9549,11 +9465,6 @@ vuex@^3.6.2:
   resolved "https://registry.npmmirror.com/vuex/-/vuex-3.6.2.tgz"
   integrity sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw==
 
-w3c-keyname@^2.2.0:
-  version "2.2.8"
-  resolved "https://registry.npmmirror.com/w3c-keyname/-/w3c-keyname-2.2.8.tgz#7b17c8c6883d4e8b86ac8aba79d39e880f8869c5"
-  integrity sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==
-
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/watchpack-chokidar2/-/watchpack-chokidar2-2.0.1.tgz"
@@ -9880,6 +9791,14 @@ xmlbuilder@^15.1.1:
   version "15.1.1"
   resolved "https://registry.npmmirror.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz"
   integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
+
+xss@^1.0.6:
+  version "1.0.15"
+  resolved "https://registry.npmmirror.com/xss/-/xss-1.0.15.tgz#96a0e13886f0661063028b410ed1b18670f4e59a"
+  integrity sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==
+  dependencies:
+    commander "^2.20.3"
+    cssfilter "0.0.10"
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

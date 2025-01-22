@@ -8,7 +8,7 @@
     </div>
     <q-chip color="orange" text-color="white" icon="event">Markdown编辑器：</q-chip>
       <q-separator />
-      <div id="editor"></div>
+      <mavon-editor v-model="value" />
   </div>
 </template>
 

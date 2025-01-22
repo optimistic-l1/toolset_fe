@@ -2,24 +2,16 @@ export default {
   name: "MarkdownEditor",
   data() {
     return {
-    
+      value: "",
     };
   },
-  computed: {
-    
-  },
-  watch: {
-   
-  },
+  computed: {},
+  watch: {},
   mounted() {
-    this.initEditor()
+    this.initEditor();
   },
-  destroyed() {
-    
+  destroyed() {},
+  methods: {
+    initEditor() {},
   },
-  methods: {    
-    initEditor() {
-     
-  },
-}
 };

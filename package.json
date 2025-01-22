@@ -19,6 +19,7 @@
     "core-js": "^3.6.5",
     "highlight.js": "^11.11.1",
     "jsoneditor": "^10.1.2",
+    "mavon-editor": "^2.10.4",
     "monaco-editor": "^0.30.1",
     "push-dir": "^0.4.1",
     "quasar": "^1.0.0",
