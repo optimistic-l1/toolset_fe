@@ -1,3 +1,4 @@
+
 const routes = [
   {
     path: "/",
@@ -8,38 +9,45 @@ const routes = [
         redirect: "/home/",
         component: () => import("layouts/MainLayout.vue"),
         children: [
-          { path: "/home", component: () => import("pages/Home") },
+          { path: "/home",name:'Home', component: () => import("pages/Home") },
           {
             path: "/toolset",
             component: { render: (h) => h("router-view") },
             children: [
-              { path: "", component: () => import("pages/ToolSet") },
+              { path: "",name:'Toolset', component: () => import("pages/ToolSet") },
               {
                 path: "colorConverter",
+                name: 'ColorConverter',
                 component: () => import("pages/Tool/ColorConverter"),
               },
               {
                 path: "imageTranscoding",
+                name: 'ImageTranscoding',
                 component: () => import("pages/Tool/ImageTranscoding"),
               },
               {
                 path: "ImageCompression",
+                name: 'ImageCompression',
                 component: () => import("pages/Tool/ImageCompression"),
               },
               {
                 path: "codeEditor",
+                name: 'CodeEditor',
                 component: () => import("pages/Tool/CodeEditor"),
               },
               {
                 path: "jsonConverter",
+                name: 'JsonConverter',
                 component: () => import("pages/Tool/JsonConverter"),
               },
               {
                 path: "richTextEditor",
+                name: 'RichTextEditor',
                 component: () => import("pages/Tool/RichTextEditor"),
               },
               {
                 path: "markdownEditor",
+                name: 'MarkdownEditor',
                 component: () => import("pages/Tool/MarkdownEditor"),
               },
               
