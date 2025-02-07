@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import history from './history'
 // import example from './module-example'
 
 Vue.use(Vuex)
@@ -18,7 +17,6 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       // example
-      history
     },
 
     // enable strict mode (adds overhead!)

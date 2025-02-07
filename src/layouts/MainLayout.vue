@@ -26,7 +26,8 @@
       </q-list>
     </q-drawer>
     <q-page-container>
-      <router-link
+      <div class="tags-view-container">
+        <router-link
         v-for="(tab, index) in tabs"
         :key="index"
         :to="tab.path"
@@ -39,6 +40,7 @@
           @click.prevent.stop="removeTab(index)"
         />
       </router-link>
+      </div>
       <keep-alive>
         <router-view :key="$route.fullPath"/>
       </keep-alive>
@@ -134,8 +136,17 @@ export default {
 };
 </script>
 
-<style scoped>
-.tags-view-item {
+<style lang="scss" scoped>
+.tags-view-container {
+  display: flex; /* 使用 flex 布局 */
+  overflow-x: auto; /* 横向滚动 */
+  overflow-y: hidden; /* 隐藏垂直滚动条 */
+  white-space: nowrap; /* 防止换行 */
+  padding: 5px 0; /* 添加一些内边距 */
+  border-bottom: 1px solid #e6e6e6; /* 添加底部边框 */
+  background-color: #f9f9f9; /* 背景颜色 */
+  
+  .tags-view-item {
   display: inline-block;
   padding: 5px 5px;
   margin: 3px;
@@ -154,4 +165,6 @@ export default {
   border-color: #1976d2;
   color: #fff;
 }
+}
+
 </style>
