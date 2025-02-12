@@ -14,6 +14,8 @@
     11.js与json互转<br />
     12.图片转换（png,jpg,svg,ico）<br />
     13.echarts图（饼图，条形图）
+    14.qrcode
+    15.tesseract.js
   </div>
 </template>
 

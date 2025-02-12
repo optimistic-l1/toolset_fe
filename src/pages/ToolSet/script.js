@@ -10,7 +10,7 @@ export default {
         {icon:'data_object',title:'JsonConverter',describe:'JSON转换器',to:'/jsonConverter'},
         {icon:'terminal',title:'RichTextEditor',describe:'富文本编辑器',to:'/richTextEditor'},
         {icon:'terminal',title:'MarkdownEditor',describe:'Markdown编辑器',to:'/markdownEditor'},
-        
+        {icon:'terminal',title:'ImageRecognition',describe:'图片识别文本',to:'/imageRecognition'},
       ]
     }
   },

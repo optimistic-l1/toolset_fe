@@ -50,7 +50,11 @@ const routes = [
                 name: 'MarkdownEditor',
                 component: () => import("pages/Tool/MarkdownEditor"),
               },
-              
+              {
+                path: "imageRecognition",
+                name: 'imageRecognition',
+                component: () => import("pages/Tool/ImageRecognition"),
+              },
               
             ],
           },
