@@ -11,6 +11,8 @@ export default {
         {icon:'terminal',title:'RichTextEditor',describe:'富文本编辑器',to:'/richTextEditor'},
         {icon:'terminal',title:'MarkdownEditor',describe:'Markdown编辑器',to:'/markdownEditor'},
         {icon:'terminal',title:'ImageRecognition',describe:'图片识别文本',to:'/imageRecognition'},
+        {icon:'terminal',title:'QRCodeGeneration',describe:'二维码生成',to:'/QRCodeGeneration'},
+        
       ]
     }
   },

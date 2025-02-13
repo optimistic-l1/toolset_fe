@@ -1,4 +1,3 @@
-import { copyToClipboard } from "src/utils";
 import Tesseract from 'tesseract.js';
 
 export default {
@@ -12,10 +11,6 @@ export default {
     };
   },
   methods: {    
-    copyToClipboard(text) {
-      copyToClipboard(text);
-      this.$q.notify({ message: "复制成功" + text, type: "positive" });
-    },
     uploadImage(){
       this.url = URL.createObjectURL(this.file);
       this.results=[]

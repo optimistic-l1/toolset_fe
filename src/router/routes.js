@@ -55,6 +55,12 @@ const routes = [
                 name: 'imageRecognition',
                 component: () => import("pages/Tool/ImageRecognition"),
               },
+              {
+                path: "QRCodeGeneration",
+                name: 'QRCodeGeneration',
+                component: () => import("pages/Tool/QRCodeGeneration"),
+              },
+              
               
             ],
           },
