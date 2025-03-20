@@ -1,4 +1,4 @@
-import { copyToClipboard } from "src/utils";
+import { copyText } from "src/utils";
 import JSONEditor from "jsoneditor";
 import "jsoneditor/dist/jsoneditor.min.css";
 
@@ -49,7 +49,7 @@ export default {
       console.log("Current JSON:", JSON.parse(JSON.stringify(this.jsonData)));
     },
     copyToClipboard(text) {
-      copyToClipboard(text);
+      copyText(text);
       this.$q.notify({ message: "复制成功" + text, type: "positive" });
     },
   },

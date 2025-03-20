@@ -1,4 +1,3 @@
-import { copyToClipboard } from "src/utils";
 import QRCode from 'qrcodejs2';
 
 export default {

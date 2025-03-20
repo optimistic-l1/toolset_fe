@@ -1,4 +1,4 @@
-import { copyToClipboard } from "src/utils";
+import { copyText } from "src/utils";
 import MonacoEditor from "./MonacoEditor.vue";
 
 export default {
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     copyToClipboard(text) {
-      copyToClipboard(text);
+      copyText(text);
       this.$q.notify({ message: "复制成功" + text, type: "positive" });
     },
     
