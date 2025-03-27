@@ -12,6 +12,7 @@ export default {
         {icon:'terminal',title:'MarkdownEditor',describe:'Markdown编辑器',to:'/markdownEditor'},
         {icon:'terminal',title:'ImageRecognition',describe:'图片识别文本',to:'/imageRecognition'},
         {icon:'terminal',title:'QRCodeGeneration',describe:'二维码生成',to:'/QRCodeGeneration'},
+        {icon:'terminal',title:'TextDiff',describe:'文本对比',to:'/textDiff'},
         
       ]
     }

@@ -60,6 +60,11 @@ const routes = [
                 name: 'QRCodeGeneration',
                 component: () => import("pages/Tool/QRCodeGeneration"),
               },
+              {
+                path: "TextDiff",
+                name: 'TextDiff',
+                component: () => import("pages/Tool/TextDiff"),
+              },
               
               
             ],
